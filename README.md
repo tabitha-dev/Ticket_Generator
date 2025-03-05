@@ -3,7 +3,8 @@
 ![image](https://github.com/user-attachments/assets/58d3aa44-997e-45a2-be39-7b51d6bda2a3)
 
 
-![image](https://github.com/user-attachments/assets/151a514e-27e1-4069-90d9-0d51cafc07b9)
+![image](https://github.com/user-attachments/assets/9314b849-bca3-4112-b96b-ba421acf1755)
+
 
 
 A modern, **glassmorphic** ticket generator for **Tech Summit 2025**.  
