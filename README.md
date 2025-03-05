@@ -1,6 +1,10 @@
 # 🎟 Tech Summit 2025 - Ticket Generator
 
-![image](https://github.com/user-attachments/assets/fb9f963b-b09b-43cc-a1c2-dcf5c1cad725)
+![image](https://github.com/user-attachments/assets/58d3aa44-997e-45a2-be39-7b51d6bda2a3)
+
+
+![image](https://github.com/user-attachments/assets/151a514e-27e1-4069-90d9-0d51cafc07b9)
+
 
 A modern, **glassmorphic** ticket generator for **Tech Summit 2025**.  
 Users can enter their name, select a ticket type, generate a **QR-coded ticket**, and print it for the event.
