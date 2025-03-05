@@ -1,0 +1,206 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #00C4CC;
+    --secondary-color: #8C30F5;
+    --accent-color: #FF61D2;
+    --background-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --glass-bg: rgba(255, 255, 255, 0.18);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-blur: 12px;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    --input-padding: 6px;
+    --input-font-size: 13px;
+    --label-font-size: 13px;
+    --transition-speed: 0.3s;
+    --input-bg: rgba(255, 255, 255, 0.25);
+    --input-border: rgba(255, 255, 255, 0.5);
+    --text-light: rgba(255, 255, 255, 0.85);
+}
+
+/* Apply Gradient Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-gradient);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Particles Background */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Glassmorphism Container */
+.container {
+    background: var(--glass-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    padding: 18px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+}
+
+/* Cursive Heading */
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    color: var(--text-light);
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px;
+}
+
+/* Input Group Styling */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+/* Labels Outside Inputs */
+.input-group label {
+    font-size: var(--label-font-size);
+    font-weight: 500;
+    color: var(--text-light);
+    margin-bottom: 3px;
+}
+
+/* Input and Select Styling */
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: var(--input-padding);
+    font-size: var(--input-font-size);
+    border: 1px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--text-light);
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: border-color var(--transition-speed), background-color var(--transition-speed);
+}
+
+/* Name and Ticket Type Fields: Smaller */
+.input-group input[type="text"],
+.input-group select {
+    height: 26px;
+}
+
+/* Date Field: Smallest */
+.input-group input[type="date"] {
+    height: 24px;
+    font-size: 11px;
+}
+
+/* Placeholder Text */
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+/* Select Dropdown Styling */
+.input-group select {
+    appearance: none;
+    background: var(--input-bg);
+    padding-right: 24px;
+}
+
+/* Buttons */
+button {
+    padding: 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--accent-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    width: 100%;
+    min-height: 36px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.01);
+}
+
+/* Download Button */
+#downloadTicket {
+    background-color: var(--primary-color);
+}
+
+#downloadTicket:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Ticket Display */
+.ticket {
+    background: rgba(240, 240, 240, 0.95);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 16px;
+    margin-top: 10px;
+    text-align: left;
+    color: #333;
+}
+
+/* Ticket ID Styling */
+#ticketID {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* QR Code */
+#qrCodeContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Hide Ticket Initially */
+.hidden {
+    display: none;
+}
+
+/* Print Styling */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .ticket, .ticket * {
+        visibility: visible;
+    }
+    .ticket {
+        background: white;
+        padding: 20px;
+        box-shadow: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 18px;
+    }
+}

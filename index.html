@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Summit 2025 - Ticket Generator</title>
+    <link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+    <!-- Custom Script -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <h1>Tech Summit 2025</h1>
+        <form id="ticketForm">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label for="ticketType">Ticket Type</label>
+                <select id="ticketType">
+                    <option value="Standard">Standard</option>
+                    <option value="VIP">VIP</option>
+                    <option value="Student">Student</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+            </div>
+            <button type="submit">Generate Ticket</button>
+        </form>
+
+        <div id="ticket" class="ticket hidden">
+            <h2>🎟️ Your Ticket</h2>
+            <p><strong>Ticket ID:</strong> <span id="ticketID"></span></p> <!-- ✅ ADDED -->
+            <p><strong>Name:</strong> <span id="ticketName"></span></p>
+            <p><strong>Type:</strong> <span id="ticketTypeDisplay"></span></p>
+            <p><strong>Date:</strong> <span id="ticketDate"></span></p>
+            <p><strong>Venue:</strong> Austin Convention Center</p>
+            <div id="qrCodeContainer"></div>
+            <button id="printTicket">Print Ticket</button>
+            <button id="downloadTicket">Download Ticket</button> <!-- ✅ ADDED -->
+        </div>
+    </div>
+</body>
+</html>
