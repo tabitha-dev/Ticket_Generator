@@ -55,7 +55,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Initialize Particles.js
-    particlesJS("particles-js", {
-        particles: { number: { value: 80, density: { enable: true, value_area: 800 } } }
-    });
+
+particlesJS("particles-js", {
+    particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.4, random: true },
+        size: { value: 5, random: true },
+        move: { enable: true, speed: 2, direction: "none" }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" }
+        }
+    }
 });
+
